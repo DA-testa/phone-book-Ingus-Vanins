@@ -31,12 +31,10 @@ def process_queries(queries):
             if cur_query.number in contacts:
                 del contacts[cur_query.number]
                 ph.remove(cur_query.number)
-                break
+                
                 
         else:
-            response = contacts.get(cur_query.number, 'not found')
-            break
-            
+            response = contacts.get(cur_query.number, 'not found')                       
             result.append(response)
     return result
 
